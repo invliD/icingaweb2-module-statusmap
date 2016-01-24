@@ -13,6 +13,11 @@ In addition, the monitoring module does not contain a few IDO model classes, so 
 ```bash
 ln -s ../../../../../../statusmap/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php
 ```
+and link the DataView
+```bash
+ln -s ../../../../../../statusmap/library/Monitoring/DataView/Hostdependency.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/DataView/Hostdependency.php
+```
+
 
 ## Contributing
 If you want to contribute to this project:
