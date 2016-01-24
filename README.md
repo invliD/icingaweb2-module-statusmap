@@ -9,9 +9,10 @@ To install, check out this repo to your icingaweb2 modules directory:
 git clone https://github.com/invliD/icingaweb2-module-statusmap.git /usr/share/icingaweb2/modules/statusmap
 ```
 
-In addition, the monitoring module does not contain a few IDO model classes, so you need to link the IDO classes into that module:
+In addition, the monitoring module does not contain an IDO model class and a DataView, so you need to link those files into that module:
 ```bash
 ln -s ../../../../../../statusmap/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php
+ln -s ../../../../statusmap/library/Monitoring/DataView/Hostdependency.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/DataView/Hostdependency.php
 ```
 
 ## Contributing
