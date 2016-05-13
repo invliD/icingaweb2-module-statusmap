@@ -27,6 +27,9 @@
 					id: host.host_name,
 					label: host.display_name,
 					color: this.stateToColor(host.state),
+					font: {
+						color: "#ffffff",
+					},
 				});
 			}
 			// create an array with nodes
