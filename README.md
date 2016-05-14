@@ -21,3 +21,6 @@ If you want to contribute to this project:
 - Fork the repository
 - Hack your changes
 - Submit a Pull Request
+
+## License
+This project is licensed under the GNU GPLv2. See COPYING.md for the full license text.
