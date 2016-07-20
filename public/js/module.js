@@ -61,7 +61,7 @@
 				case 0: return '#44bb77'; // UP
 				case 1: return '#ff5566'; // DOWN
 				case 2: return '#aa44ff'; // UNREACHABLE
-				case 99: return '##77aaff'; // PENDING
+				case 99: return '#77aaff'; // PENDING
 			}
 			return '#0095BF'; // icinga-blue
 		},
