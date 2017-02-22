@@ -14,6 +14,11 @@ In addition, the monitoring module does not contain an IDO model class and a Dat
 ln -s ../../../../../../statusmap/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/Backend/Ido/Query/HostdependencyQuery.php
 ln -s ../../../../statusmap/library/Monitoring/DataView/Hostdependency.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/DataView/Hostdependency.php
 ```
+and link the DataView
+```bash
+ln -s ../../../../../../statusmap/library/Monitoring/DataView/Hostdependency.php /usr/share/icingaweb2/modules/monitoring/library/Monitoring/DataView/Hostdependency.php
+```
+
 
 ## Contributing
 If you want to contribute to this project:
