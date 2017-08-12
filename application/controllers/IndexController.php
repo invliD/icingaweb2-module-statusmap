@@ -1,20 +1,16 @@
 <?php
 
-use Icinga\Data\Filter\Filter;
+
 use Icinga\Module\Monitoring\Controller as MonitoringController;
-use Icinga\Module\Monitoring\Object\HostList;
 use Icinga\Web\Url;
 
 class StatusMap_IndexController extends MonitoringController
 {
 
-    protected $hostList;
+    protected $hosts;
 
     public function init()
     {
-        $this->hostList = new HostList($this->backend);
-        $this->hostList->addFilter(Filter::matchAll());
-
         $this->getTabs()->add(
             'show',
             array(
@@ -27,15 +23,18 @@ class StatusMap_IndexController extends MonitoringController
 
     public function indexAction()
     {
-        $this->hostList->setColumns(array(
-            'host_name',
-            'host_display_name',
-            'host_state',
-        ));
+        $query = $this->backend
+            ->select()
+            ->from('hoststatus', array(
+                'host_display_name',
+                'host_name',
+                'host_state' => 'host_state'));
 
-        $hosts = $this->hostList->fetch();
+        $this->applyRestriction('monitoring/filter/objects', $query);
 
-        $dependencies= $this->backend
+        $hosts = $query->fetchAll();
+
+        $dependencies = $this->backend
             ->select()
             ->from('customvar', array(
                 'host_name',
